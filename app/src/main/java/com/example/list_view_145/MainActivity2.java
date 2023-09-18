@@ -116,8 +116,8 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
 
     public void Sn_writer(int position)
     {
-        String st = " S(n) = "+Double.toString(Sn_calculator_NORMAL(position,B[position]));
-        String st2 = " S(n) = "+Double.toString(Sn_calculator_Engineer(position));
+        String st = " S(n) = "+Double.toString(Sn_calculator_NORMAL(position+2,B[position]));
+        String st2 = " S(n) = "+Double.toString(Sn_calculator_Engineer(position+2));
         if(ans && qd12 == 1)
         {
             Sn.setText(st);
