@@ -111,7 +111,7 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         String st2 = " A(n) = "+Double.toString(B[position]);
         n.setText(st);
         AN.setText(st2);
-        Sn_writer(position+2);
+        Sn_writer(position);
     }
 
     public void Sn_writer(int position)
@@ -139,7 +139,7 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
 
     public Double Sn_calculator_NORMAL(int position, Double an)
     {
-        return(position*(an+a1));
+        return((position*(an+a1))/2);
     }
 
 
