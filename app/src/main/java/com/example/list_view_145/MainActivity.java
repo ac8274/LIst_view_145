@@ -64,15 +64,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static boolean check_valid_value(String num){
-        /* function gets a string and checks if it could be turned into a double.*/
-        try{
-            double f = strToDouble(num);
-            return true;
-        }
-        catch (Exception e) // if exception rises then string can't be convereted.
+        if(num.length() == 2 && num.charAt(0) == '-' && num.charAt(1) == '.')
         {
             return false;
         }
+        else if(num.length() == 1)
+        {
+            if(num.charAt(0)=='-' || num.charAt(0)=='.')
+            {
+                return false;
+            }
+        }
+        return !num.isEmpty();
     }
 
     public static double strToDouble(String str) {
